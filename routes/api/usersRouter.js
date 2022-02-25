@@ -7,10 +7,10 @@ const {
 } = require("../../controllers/usersController");
 
 // /api/users
-router.routes("/").get(getAllUsers).post(createUsers);
+router.route("/").get(getAllUsers).post(createUsers);
 
 // /api/users/:userId
-router.routes("/userId").get(getSingleUser).delete(deleteUser);
+router.route("/:userId").get(getSingleUser).delete(deleteUser);
 
 // add routes for users
 module.exports = router;

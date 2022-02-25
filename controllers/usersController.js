@@ -5,8 +5,8 @@ const { Users } = require("../models");
 module.exports = {
   getUsers(req, res) {
     Users.find()
-      .then(async (students) => {
-        return res.json(studentObj);
+      .then(async (user) => {
+        return res.json(user);
       })
       .catch((err) => {
         console.log(err);
