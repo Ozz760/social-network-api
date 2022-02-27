@@ -32,8 +32,19 @@ module.exports = {
   // Create a thought
   createThought(req, res) {
     Thought.create(req.body)
-      .then(async (thought) => {
-        return res.json(thought);
+      .then((thought) => {
+        return User.findOneAndUpdate(
+          { _id: req.body.userId },
+          { $push: { thoughts: thought._id } },
+          { new: true }
+        );
+      })
+      .then((dbUserData) => {
+        if (!dbUserData) {
+          res.status(404).json({ message: "No user found with this id" });
+          return;
+        }
+        res.json(dbUserData);
       })
       .catch((err) => {
         console.log(err);
@@ -87,7 +98,7 @@ module.exports = {
   deleteReaction(req, res) {
     Thought.findOneAndUpdate(
       { _id: req.params.thoughtId },
-      { $pull: { friends: req.body.reactionId } },
+      { $pull: { reactions: { _id: req.params.reactionId } } },
       { new: true }
     )
       .then(async (thought) => {
