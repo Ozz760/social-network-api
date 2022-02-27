@@ -1,10 +1,10 @@
 // export functions for handling user requests
-const { Users } = require("../models");
+const { User } = require("../models");
 
 module.exports = {
   // Get all users
   getAllUsers(req, res) {
-    Users.find()
+    User.find()
       .then(async (user) => {
         return res.json(user);
       })

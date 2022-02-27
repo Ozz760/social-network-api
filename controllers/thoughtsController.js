@@ -1,5 +1,5 @@
 // export function for handling thought request
-const { Thought } = require("../models");
+const { Thought, User } = require("../models");
 
 module.exports = {
   // Get all thoughts
