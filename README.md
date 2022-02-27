@@ -22,7 +22,7 @@ Oscar Silva
 
 GitHub: https://github.com/Ozz760
 
-Email: oscarsilva2356@gamil.com
+Email: oscarsilva2356@gmail.com
 
 
 
