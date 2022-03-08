@@ -3,7 +3,7 @@
 ## Description 
 This application is a social media app where user can create an account and have the ability to make a post. In addition to those functions the user is able to make friends with other user and able to react to other user comments. 
 
-Video Example: https://drive.google.com/file/d/1KHJ2sXocqJ8KDFXPYchmeBH71-R2hfc5/view
+Video Example: https://drive.google.com/file/d/1og8wqwCj-iMzRz9WlDC6RTLnK3SkYKZ2/view
 
 ## Getting Started 
 This application requires the user to install Express, and Mongoose dependencies. 
